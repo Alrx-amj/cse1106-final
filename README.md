@@ -18,30 +18,12 @@ I wish to improve in memorizing keys and shortcuts on terminal
 
 
 
+float memory, storage;
 
+printf("Enter memory percentage: ");
+scanf("%f", &memory);
 
-    float memory, storage;
+printf("Enter storage percentage: ");
+scanf("%f", &storage);
 
-if (argc > 1 && argv[1][0] == 't') {
-    printf("Enter fake memory usage: ");
-    if (scanf("%f", &memory) != 1) break;
-
-    printf("Enter fake storage usage: ");
-    if (scanf("%f", &storage) != 1) break;
-
-    if (memory < 0 || memory > 100 ||
-        storage < 0 || storage > 100) {
-        printf("Values must be between 0 and 100\n");
-        continue;
-    }
-} else {
-    memory = getMemory();
-    storage = getStorage();
-} 
-
-float threshold = 80.0;
-
-if (argc > 2)
-    threshold = atof(argv[2]);
-else if (argc > 1 && argv[1][0] != 't')
-    threshold = atof(argv[1]);
+    
