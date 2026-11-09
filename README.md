@@ -37,4 +37,11 @@ if (argc > 1 && argv[1][0] == 't') {
 } else {
     memory = getMemory();
     storage = getStorage();
-}
+} 
+
+float threshold = 80.0;
+
+if (argc > 2)
+    threshold = atof(argv[2]);
+else if (argc > 1 && argv[1][0] != 't')
+    threshold = atof(argv[1]);
