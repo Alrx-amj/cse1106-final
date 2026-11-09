@@ -1,0 +1,1 @@
+Our design will use a Raspberry Pi to monitor memory and storage usage. The program will display the usage percentages and compare them to a set threshold of 80%. If either exceeds the limit, an LED will turn on to warn the user. The results will also be saved to a file, and the threshold can be adjusted.
