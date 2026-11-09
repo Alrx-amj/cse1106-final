@@ -68,15 +68,21 @@ while (1) {
    float memory, storage;
 
 printf("Enter memory percentage: ");
+fflush(stdout);
+if (scanf ("%f", &memory) !=1)
+break;
 scanf("%f", &memory);
 
 printf("Enter storage percentage: ");
 scanf("%f", &storage);
+fflush(stdout);
+if (scanf ("%f", &memory) !=1)
+break;
 
-
-    if (memory < 0 || storage < 0) {
+    if (memory < 0 || storage < 100 || storage < 0 || storage < 100)
+     {
         printf("Unable to read resources\n");
-        break;
+        continue;
     }
 
     int warning = memory > threshold ||
