@@ -65,8 +65,14 @@ if (led == NULL ||
 }
 
 while (1) {
-    float memory = getMemory();
-    float storage = getStorage();
+   float memory, storage;
+
+printf("Enter memory percentage: ");
+scanf("%f", &memory);
+
+printf("Enter storage percentage: ");
+scanf("%f", &storage);
+
 
     if (memory < 0 || storage < 0) {
         printf("Unable to read resources\n");
